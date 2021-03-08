@@ -6,16 +6,16 @@ table.table.table-hover
     tbody 
         tr 
             th= Task.human_attribute_name(:id)
-            th= @task.id
+            td= @task.id
         tr
             th= Task.human_attribute_name(:name)
-            th= @task.name
+            td= @task.name
         tr
             th= Task.human_attribute_name(:description)
-            th= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")
+            td= simple_format(h(@task.description), {}, sanitize: false, wrapper_tag: "div")
         tr 
             th= Task.human_attribute_name(:create_at)
-            th= @task.created_at
+            td= @task.created_at
         tr 
             th= Task.human_attribute_name(:update_at)
-            th= @task.update_at
+            td= @task.updated_at
