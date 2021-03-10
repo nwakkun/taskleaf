@@ -15,3 +15,8 @@ h1 ユーザー登録機能
     .form-group 
         = f.label :password_confirmation. class: "form-control"
     = f.submit "登録する".class: "btn btn-primary"
+
+.nav.justify-content-end 
+    = link_to "一覧", admin_users_path, class: "nav-link"
+
+= render partial: "form", locals: { user: @user }
